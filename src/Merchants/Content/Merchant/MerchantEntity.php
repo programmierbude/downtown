@@ -232,19 +232,32 @@ class MerchantEntity extends Entity
      * @var string|null
      * @OA\Property()
      */
-    protected $mollieProdKey;
+    protected $trxpsProdKey;
 
     /**
      * @var string|null
      * @OA\Property()
      */
-    protected $mollieTestKey;
+    protected $trxpsTestKey;
+
+
+    /**
+     * @var string|null
+     * @OA\Property()
+     */
+    protected $trxpsProdShopId;
+
+    /**
+     * @var string|null
+     * @OA\Property()
+     */
+    protected $trxpsTestShopId;
 
     /**
      * @var bool
      * @OA\Property()
      */
-    protected $mollieTestEnabled;
+    protected $trxpsTestEnabled;
 
     /**
      * @var string|null
@@ -576,49 +589,81 @@ class MerchantEntity extends Entity
     /**
      * @return string|null
      */
-    public function getMollieProdKey(): ?string
+    public function getTrxpsProdKey(): ?string
     {
-        return $this->mollieProdKey;
+        return $this->trxpsProdKey;
     }
 
     /**
-     * @param string|null $mollieProdKey
+     * @param string|null $trxpsProdKey
      */
-    public function setMollieProdKey(?string $mollieProdKey): void
+    public function setTrxpsProdKey(?string $trxpsProdKey): void
     {
-        $this->mollieProdKey = $mollieProdKey;
+        $this->trxpsProdKey = $trxpsProdKey;
     }
 
     /**
      * @return string|null
      */
-    public function getMollieTestKey(): ?string
+    public function getTrxpsTestKey(): ?string
     {
-        return $this->mollieTestKey;
+        return $this->trxpsTestKey;
     }
 
     /**
-     * @param string|null $mollieTestKey
+     * @param string|null $trxpsTestKey
      */
-    public function setMollieTestKey(?string $mollieTestKey): void
+    public function setTrxpsTestKey(?string $trxpsTestKey): void
     {
-        $this->mollieTestKey = $mollieTestKey;
+        $this->trxpsTestKey = $trxpsTestKey;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getTrxpsProdShopId(): ?string
+    {
+        return $this->trxpsProdShopId;
+    }
+
+    /**
+     * @param string|null $trxpsProdShopId
+     */
+    public function setTrxpsProdShopId(?string $trxpsProdShopId): void
+    {
+        $this->trxpsProdShopId = $trxpsProdShopId;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getTrxpsTestShopId(): ?string
+    {
+        return $this->trxpsTestShopId;
+    }
+
+    /**
+     * @param string|null $trxpsTestShopId
+     */
+    public function setTrxpsTestShopId(?string $trxpsTestShopId): void
+    {
+        $this->trxpsTestShopId = $trxpsTestShopId;
     }
 
     /**
      * @return bool
      */
-    public function isMollieTestEnabled(): bool
+    public function isTrxpsTestEnabled(): bool
     {
-        return $this->mollieTestEnabled;
+        return $this->trxpsTestEnabled;
     }
 
     /**
-     * @param bool $mollieTestEnabled
+     * @param bool $trxpsTestEnabled
      */
-    public function setMollieTestEnabled(bool $mollieTestEnabled): void
+    public function setTrxpsTestEnabled(bool $trxpsTestEnabled): void
     {
-        $this->mollieTestEnabled = $mollieTestEnabled;
+        $this->trxpsTestEnabled = $trxpsTestEnabled;
     }
 
     /**

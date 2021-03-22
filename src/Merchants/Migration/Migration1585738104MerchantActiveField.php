@@ -16,7 +16,7 @@ class Migration1585738104MerchantActiveField extends MigrationStep
     {
         $connection->executeQuery('ALTER TABLE `merchant`
 ADD `active` tinyint(1) NOT NULL DEFAULT "0" AFTER `id`,
-ADD `activation_code` varchar(1024) COLLATE \'utf8mb4_unicode_ci\' NULL;');
+ADD `activation_code` varchar(512) COLLATE \'utf8mb4_unicode_ci\' NULL;');
         $connection->executeQuery('UPDATE merchant SET active = 1');
     }
 

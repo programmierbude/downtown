@@ -20,7 +20,7 @@ class Migration1585133049DeliveryBoy extends MigrationStep
                 `title` VARCHAR(255) NULL,
                 `first_name` VARCHAR(255) NOT NULL,
                 `last_name` VARCHAR(255) NOT NULL,
-                `password` VARCHAR(1024) NULL,
+                `password` varchar(512) NULL,
                 `email` VARCHAR(255) NOT NULL,
                 `active` TINYINT(1) NULL DEFAULT "0",
                 `zipcode` VARCHAR(255) NOT NULL,

@@ -16,7 +16,7 @@ class Migration1585230204MerchantPassword extends MigrationStep
     {
         $sql = <<<SQL
         ALTER TABLE `merchant`
-            ADD `password` varchar(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+            ADD `password` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
         ;
 SQL;
 

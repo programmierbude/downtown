@@ -1,0 +1,3 @@
+[submodule "custom/plugins/trxps-plugin-shopware-downtown"]
+	path = custom/plugins/trxps-plugin-shopware-downtown
+	url = ssh://github.com/safety-net-code/trxps-plugin-shopware-downtown

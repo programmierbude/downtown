@@ -16,7 +16,7 @@ class Migration15853254128MerchantPublicOwner extends MigrationStep
     {
         $sql = <<<SQL
         ALTER TABLE `merchant`
-            ADD `public_owner` varchar(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+            ADD `public_owner` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
         ;
 SQL;
 

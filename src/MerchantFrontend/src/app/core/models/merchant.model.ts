@@ -30,9 +30,11 @@ export interface Merchant {
   active: boolean;
   availability: number;
   availabilityText: string;
-  mollieProdKey: string;
-  mollieTestKey: string;
-  mollieTestEnabled: boolean;
+  trxpsProdKey: string;
+  trxpsTestKey: string;
+  trxpsProdShopId: string;
+  trxpsTestShopId: string;
+  trxpsTestEnabled: boolean;
   paymentMethods: string;
 
   services: {

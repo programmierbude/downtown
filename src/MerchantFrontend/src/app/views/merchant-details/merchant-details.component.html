@@ -270,74 +270,7 @@
       {{'COMMON.PAYMENTS' | translate}}
     </button>
     <clr-tab-content>
-
-      <h4>{{'MERCHANT.PAYMENTS.INSTRUCTIONS.ABOUT_HEADLINE' | translate}}</h4>
-      <p>
-        <span [innerHTML]="'MERCHANT.PAYMENTS.INSTRUCTIONS.ABOUT_TEXT' | translate"></span>
-      </p>
-      <h4>{{'MERCHANT.PAYMENTS.INSTRUCTIONS.SINGLE_CONTRACT_HEADLINE' | translate}}</h4>
-      <p>
-        <span [innerHTML]="'MERCHANT.PAYMENTS.INSTRUCTIONS.SINGLE_CONTRACT_TEXT' | translate"></span>
-      </p>
-      <h4>{{'MERCHANT.PAYMENTS.INSTRUCTIONS.PAYPERTRANSACTION_HEADLINE' | translate}}</h4>
-      <p>
-        <span [innerHTML]="'MERCHANT.PAYMENTS.INSTRUCTIONS.PAYPERTRANSACTION_TEXT' | translate"></span>
-      </p>
-      <h4>{{'MERCHANT.PAYMENTS.INSTRUCTIONS.PAYMENTMETHODS_HEADLINE' | translate}}</h4>
-      <p>
-        <span [innerHTML]="'MERCHANT.PAYMENTS.INSTRUCTIONS.PAYMENTMETHODS_TEXT' | translate"></span>
-      </p>
-      <h4>{{'MERCHANT.PAYMENTS.INSTRUCTIONS.USE_HEADLINE' | translate}}</h4>
-      <p>
-        <span [innerHTML]="'MERCHANT.PAYMENTS.INSTRUCTIONS.USE_TEXT' | translate"></span>
-      </p>
-      <h4>{{'MERCHANT.PAYMENTS.INSTRUCTIONS.KEYS_HEADLINE' | translate}}</h4>
-      <p>
-        <span [innerHTML]="'MERCHANT.PAYMENTS.INSTRUCTIONS.KEYS_TEXT' | translate"></span>
-      </p>
-      <h4>{{'MERCHANT.PAYMENTS.INSTRUCTIONS.QUESTIONS_HEADLINE' | translate}}</h4>
-      <p>
-        <span [innerHTML]="'MERCHANT.PAYMENTS.INSTRUCTIONS.QUESTIONS_TEXT' | translate"></span>
-      </p>
-      <br/>
-
-      <h3>{{'MERCHANT.PAYMENTS.SETTINGS' | translate}}</h3>
-
-      <br/>
       <form clrForm clrLayout="vertical" [formGroup]="paymentsForm" *ngIf="merchantLoaded && paymentmethodsLoaded; else loading">
-        <clr-toggle-wrapper>
-          <input
-            type="checkbox"
-            clrToggle
-            value="true"
-            formControlName="mollieTestEnabled"
-            name="mollieTestEnabled"
-          />
-          <label>{{'MERCHANT.PAYMENTS.MOLLIE_TEST_MODE' | translate}}</label>
-        </clr-toggle-wrapper>
-        <clr-input-container>
-          <label>{{'MERCHANT.PAYMENTS.MOLLIE_PROD_KEY' | translate}}</label>
-          <input
-            clrInput
-            placeholder=""
-            type="text"
-            formControlName="mollieProdKey"
-            name="mollieProdKey"
-          />
-        </clr-input-container>
-        <clr-input-container>
-          <label>{{'MERCHANT.PAYMENTS.MOLLIE_TEST_KEY' | translate}}</label>
-          <input
-            clrInput
-            placeholder=""
-            type="text"
-            formControlName="mollieTestKey"
-            name="mollieTestKey"
-          />
-        </clr-input-container>
-
-        <br/>
-
         <h3>{{'MERCHANT.PAYMENTS.PAYMENTMETHODS' | translate}}</h3>
         <ng-container formGroupName="paymentmethods" *ngIf="paymentmethods?.length > 0">
           <clr-control-container>
@@ -349,6 +282,61 @@
             </clr-toggle-wrapper>
           </clr-control-container>
         </ng-container>
+        <br/>
+        <div *ngIf="trxpsPaymentMethod != null">
+          <h3>{{'MERCHANT.PAYMENTS.TRXPS_SETTINGS' | translate}}</h3>
+          <br/>
+          <clr-toggle-wrapper>
+            <input
+              type="checkbox"
+              clrToggle
+              value="true"
+              formControlName="trxpsTestEnabled"
+              name="trxpsTestEnabled"
+            />
+            <label>{{'MERCHANT.PAYMENTS.TRXPS_TEST_MODE' | translate}}</label>
+          </clr-toggle-wrapper>
+          <clr-input-container>
+            <label>{{'MERCHANT.PAYMENTS.TRXPS_PROD_KEY' | translate}}</label>
+            <input
+              clrInput
+              placeholder=""
+              type="text"
+              formControlName="trxpsProdKey"
+              name="trxpsProdKey"
+            />
+          </clr-input-container>
+          <clr-input-container>
+            <label>{{'MERCHANT.PAYMENTS.TRXPS_TEST_KEY' | translate}}</label>
+            <input
+              clrInput
+              placeholder=""
+              type="text"
+              formControlName="trxpsTestKey"
+              name="trxpsTestKey"
+            />
+          </clr-input-container>
+          <clr-input-container>
+            <label>{{'MERCHANT.PAYMENTS.TRXPS_PROD_SHOP_ID' | translate}}</label>
+            <input
+              clrInput
+              placeholder=""
+              type="text"
+              formControlName="trxpsProdShopId"
+              name="trxpsProdShopId"
+            />
+          </clr-input-container>
+          <clr-input-container>
+            <label>{{'MERCHANT.PAYMENTS.TRXPS_TEST_SHOP_ID' | translate}}</label>
+            <input
+              clrInput
+              placeholder=""
+              type="text"
+              formControlName="trxpsTestShopId"
+              name="trxpsTestShopId"
+            />
+          </clr-input-container>
+        </div>
       </form>
 
       <button

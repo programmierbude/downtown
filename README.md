@@ -21,14 +21,14 @@ has a serious impact on the economy. Since retail stores are forced to close, th
 an income.
 
 The portal project is trying to help. It is created to serve the project [downtowns.io](https://downtowns.io/), but since
-it is open source anyone is able to set up a a web server and provide the same service as downtowns to their local community. 
+it is open source anyone is able to set up a a web server and provide the same service as downtowns to their local community.
 
 ## How it works
 
 A picture is worth a thousand words, so here are some example screen designs of the portal. The text is in german,
 since the portal was initially developed for the german market.
 
-![The registration page](.github/readme_sc_registration.jpg?raw=true "The registration page") 
+![The registration page](.github/readme_sc_registration.jpg?raw=true "The registration page")
 
 After the registration, the organisation has to be activated by the portal owner. Then these steps follow:
 
@@ -38,14 +38,14 @@ After the registration, the organisation has to be activated by the portal owner
 - Retail stores register within the organisation, internally they are handled as categories
 - Retail stores can use an App to upload products
 - Users (buyers) can browse retail stores and see what’s in stock
- 
+
 This is how the landing page for an organisation or local authority looks:
 
 ![Landing page for a local authority](.github/readme_sc_lp_org.jpg?raw=true "Landing page for a local authority")
 
-And here is an example of a retailer's landing page: 
- 
-![Landing page for a retailer](.github/readme_sc_lp_retail.jpg?raw=true "Landing page for a retailer") 
+And here is an example of a retailer's landing page:
+
+![Landing page for a retailer](.github/readme_sc_lp_retail.jpg?raw=true "Landing page for a retailer")
 
 ## Technology
 
@@ -55,7 +55,7 @@ And here is an example of a retailer's landing page:
 
 Prerequisites: [docker](https://docs.docker.com/install/), [docker-compose](https://docs.docker.com/compose/install/), [node/npm](https://nodejs.org/en/download/)
 
-> :warning: **The docker setup currently only works if your user ID is 1000.**   
+> :warning: **The docker setup currently only works if your user ID is 1000.**
 > Execute `id -u` on your terminal to check.
 
 Clone the project:
@@ -118,7 +118,7 @@ docker-compose down --remove-orphans
 
 Currently there is no docker container available, so you need to start the project using npm.
 
-Change into the directory `src/MerchantFrontend`. Then install dependencies and run the project: 
+Change into the directory `src/MerchantFrontend`. Then install dependencies and run the project:
 
 ```shell script
 cd src/MerchantFrontend
@@ -160,12 +160,12 @@ Explaining how to use a UI is easier done via video, so here is a tutorial video
 
 ### Payments
 
-#### Mollie Plugin
-Mollie is the selected payment provider for downtown.
-If you want to enable these payment methods, please install and activate the Mollie plugin.
+#### Trxps Plugin
+Trxps is the selected payment provider for downtown.
+If you want to enable these payment methods, please install and activate the Trxps plugin.
 Then activate required payment methods and assign it to your sales channel.
 
-Please note, you have to change the APP_URL to be something else then localhost to comply with Mollie API guidelines.
+Please note, you have to change the APP_URL to be something else then localhost to comply with Trxps API guidelines.
 Use the /etc/hosts entry for local development.
 
 #### Enable Payment Methods for Merchants
@@ -173,15 +173,15 @@ If you sign is as merchant you'll have access to a new payments tab in your acco
 Here you can set your molli API keys and test modes.
 
 In addition to this, you can select what payments of your assigned sales channel should be enabled
-for your merchant. 
-Only payment methods that are valid for the sales channel and are enabled in here will be 
+for your merchant.
+Only payment methods that are valid for the sales channel and are enabled in here will be
 shown during the checkout.
 
 # Contributing
 
 You have an idea or you found an issue? Please open an issue here: [shopwareDowntown/portal/issues](https://github.com/shopwareDowntown/portal/issues)
-Help retailers by contributing to this project. 
+Help retailers by contributing to this project.
 
 # Contributors
 
-[![shyim](.github/avatars/shyim.png?raw=true "shyim")](https://github.com/shyim) [![arnoldstoba](.github/avatars/arnoldstoba.png?raw=true "arnoldstoba")](https://github.com/arnoldstoba) [![PaddyS](.github/avatars/paddys.png?raw=true "PaddyS")](https://github.com/PaddyS) [![FloBWer](.github/avatars/flobwer.png?raw=true "FloBWer")](https://github.com/FloBWer) [![JanPietrzyk](.github/avatars/janpietrzyk.png?raw=true "JanPietrzyk")](https://github.com/JanPietrzyk) [![PascalThesing](.github/avatars/pascalthesing.png?raw=true "PascalThesing")](https://github.com/PascalThesing) ![Kevin Mattutat](.github/avatars/kevin-mattutat-spaceparrots-dekevin-mattutat.png?raw=true "Kevin Mattutat") ![Andreas Wolf](.github/avatars/a-wolf-shopware-comandreas-wolf.png?raw=true "Andreas Wolf") [![and-wolf](.github/avatars/and-wolf.png?raw=true "and-wolf")](https://github.com/and-wolf) [![oterhaar](.github/avatars/oterhaar.png?raw=true "oterhaar")](https://github.com/oterhaar) [![MalteJanz](.github/avatars/maltejanz.png?raw=true "MalteJanz")](https://github.com/MalteJanz) [![seggewiss](.github/avatars/seggewiss.png?raw=true "seggewiss")](https://github.com/seggewiss) [![maike93](.github/avatars/maike93.png?raw=true "maike93")](https://github.com/maike93) ![Maike Sestendrup](.github/avatars/m-sestendrup-shopware-commaike-sestendrup.png?raw=true "Maike Sestendrup") [![marcelbrode](.github/avatars/marcelbrode.png?raw=true "marcelbrode")](https://github.com/marcelbrode) [![swDennis](.github/avatars/swdennis.png?raw=true "swDennis")](https://github.com/swDennis) ![Oliver Terhaar](.github/avatars/o-terhaar-shopware-comoliver-terhaar.png?raw=true "Oliver Terhaar") [![xPand4B](.github/avatars/xpand4b.png?raw=true "xPand4B")](https://github.com/xPand4B) ![Carlos Jansen](.github/avatars/c-jansen-shopware-comcarlos-jansen.png?raw=true "Carlos Jansen") [![Carlosjan](.github/avatars/carlosjan.png?raw=true "Carlosjan")](https://github.com/Carlosjan) [![Draykee](.github/avatars/draykee.png?raw=true "Draykee")](https://github.com/Draykee) [![jakob-kruse](.github/avatars/jakob-kruse.png?raw=true "jakob-kruse")](https://github.com/jakob-kruse) [![lukasrump](.github/avatars/lukasrump.png?raw=true "lukasrump")](https://github.com/lukasrump) [![SebastianFranze](.github/avatars/sebastianfranze.png?raw=true "SebastianFranze")](https://github.com/SebastianFranze) [![Christian-Rades](.github/avatars/christian-rades.png?raw=true "Christian-Rades")](https://github.com/Christian-Rades) [![florianklockenkemper](.github/avatars/florianklockenkemper.png?raw=true "florianklockenkemper")](https://github.com/florianklockenkemper) [![niklas-rudde](.github/avatars/niklas-rudde.png?raw=true "niklas-rudde")](https://github.com/niklas-rudde) [![dnoegel](.github/avatars/dnoegel.png?raw=true "dnoegel")](https://github.com/dnoegel) ![Jakob Kruse](.github/avatars/j-kruse-shopware-comjakob-kruse.png?raw=true "Jakob Kruse") ![Luke Wenkers](.github/avatars/l-wenkers-shopware-comluke-wenkers.png?raw=true "Luke Wenkers") 
+[![shyim](.github/avatars/shyim.png?raw=true "shyim")](https://github.com/shyim) [![arnoldstoba](.github/avatars/arnoldstoba.png?raw=true "arnoldstoba")](https://github.com/arnoldstoba) [![PaddyS](.github/avatars/paddys.png?raw=true "PaddyS")](https://github.com/PaddyS) [![FloBWer](.github/avatars/flobwer.png?raw=true "FloBWer")](https://github.com/FloBWer) [![JanPietrzyk](.github/avatars/janpietrzyk.png?raw=true "JanPietrzyk")](https://github.com/JanPietrzyk) [![PascalThesing](.github/avatars/pascalthesing.png?raw=true "PascalThesing")](https://github.com/PascalThesing) ![Kevin Mattutat](.github/avatars/kevin-mattutat-spaceparrots-dekevin-mattutat.png?raw=true "Kevin Mattutat") ![Andreas Wolf](.github/avatars/a-wolf-shopware-comandreas-wolf.png?raw=true "Andreas Wolf") [![and-wolf](.github/avatars/and-wolf.png?raw=true "and-wolf")](https://github.com/and-wolf) [![oterhaar](.github/avatars/oterhaar.png?raw=true "oterhaar")](https://github.com/oterhaar) [![MalteJanz](.github/avatars/maltejanz.png?raw=true "MalteJanz")](https://github.com/MalteJanz) [![seggewiss](.github/avatars/seggewiss.png?raw=true "seggewiss")](https://github.com/seggewiss) [![maike93](.github/avatars/maike93.png?raw=true "maike93")](https://github.com/maike93) ![Maike Sestendrup](.github/avatars/m-sestendrup-shopware-commaike-sestendrup.png?raw=true "Maike Sestendrup") [![marcelbrode](.github/avatars/marcelbrode.png?raw=true "marcelbrode")](https://github.com/marcelbrode) [![swDennis](.github/avatars/swdennis.png?raw=true "swDennis")](https://github.com/swDennis) ![Oliver Terhaar](.github/avatars/o-terhaar-shopware-comoliver-terhaar.png?raw=true "Oliver Terhaar") [![xPand4B](.github/avatars/xpand4b.png?raw=true "xPand4B")](https://github.com/xPand4B) ![Carlos Jansen](.github/avatars/c-jansen-shopware-comcarlos-jansen.png?raw=true "Carlos Jansen") [![Carlosjan](.github/avatars/carlosjan.png?raw=true "Carlosjan")](https://github.com/Carlosjan) [![Draykee](.github/avatars/draykee.png?raw=true "Draykee")](https://github.com/Draykee) [![jakob-kruse](.github/avatars/jakob-kruse.png?raw=true "jakob-kruse")](https://github.com/jakob-kruse) [![lukasrump](.github/avatars/lukasrump.png?raw=true "lukasrump")](https://github.com/lukasrump) [![SebastianFranze](.github/avatars/sebastianfranze.png?raw=true "SebastianFranze")](https://github.com/SebastianFranze) [![Christian-Rades](.github/avatars/christian-rades.png?raw=true "Christian-Rades")](https://github.com/Christian-Rades) [![florianklockenkemper](.github/avatars/florianklockenkemper.png?raw=true "florianklockenkemper")](https://github.com/florianklockenkemper) [![niklas-rudde](.github/avatars/niklas-rudde.png?raw=true "niklas-rudde")](https://github.com/niklas-rudde) [![dnoegel](.github/avatars/dnoegel.png?raw=true "dnoegel")](https://github.com/dnoegel) ![Jakob Kruse](.github/avatars/j-kruse-shopware-comjakob-kruse.png?raw=true "Jakob Kruse") ![Luke Wenkers](.github/avatars/l-wenkers-shopware-comluke-wenkers.png?raw=true "Luke Wenkers")

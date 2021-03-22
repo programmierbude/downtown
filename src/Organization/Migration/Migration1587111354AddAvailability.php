@@ -17,7 +17,7 @@ class Migration1587111354AddAvailability extends MigrationStep
         $connection->executeQuery('ALTER TABLE `merchant`
 ADD `availability` tinyint(1) DEFAULT \'0\';');
         $connection->executeQuery('ALTER TABLE `merchant`
-ADD `availability_text` varchar(1024) NULL;');
+ADD `availability_text` varchar(512) NULL;');
     }
 
     public function updateDestructive(Connection $connection): void

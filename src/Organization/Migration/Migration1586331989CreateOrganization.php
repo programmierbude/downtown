@@ -17,7 +17,7 @@ class Migration1586331989CreateOrganization extends MigrationStep
         $connection->executeQuery('CREATE TABLE `organization` (
     `id` BINARY(16) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
-    `password` VARCHAR(1024) NOT NULL,
+    `password` varchar(512) NOT NULL,
     `sales_channel_id` BINARY(16) NOT NULL,
     `created_at` DATETIME(3) NOT NULL,
     `updated_at` DATETIME(3) NULL,

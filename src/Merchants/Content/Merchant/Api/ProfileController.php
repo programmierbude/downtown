@@ -258,9 +258,11 @@ class ProfileController
             ->add('revocation', new Type('string'))
             ->add('availability', new Type('integer'))
             ->add('availabilityText', new Type('string'))
-            ->add('mollieProdKey', new Type('string'))
-            ->add('mollieTestKey', new Type('string'))
-            ->add('mollieTestEnabled', new Type('bool'))
+            ->add('trxpsProdKey', new Type('string'))
+            ->add('trxpsTestKey', new Type('string'))
+            ->add('trxpsProdShopId', new Type('string'))
+            ->add('trxpsTestShopId', new Type('string'))
+            ->add('trxpsTestEnabled', new Type('bool'))
             ->add('paymentMethods', new Type('string'))
             ->addList('services', (new DataValidationDefinition())->add('id', new Type('string')));
     }

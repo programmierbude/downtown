@@ -26,6 +26,7 @@ export class MerchantDetailsComponent implements OnInit {
   paymentmethods: PaymentMethod[];
   categories: Category[];
   paymentmethodsLoaded = false;
+  trxpsPaymentMethod = null;
 
   constructor(
     private readonly stateService: StateService,
@@ -77,6 +78,10 @@ export class MerchantDetailsComponent implements OnInit {
         this.addPaymentMethodsToForm(methods.data);
         this.paymentmethods = methods.data;
         this.paymentmethodsLoaded = true;
+        let tmp = this.paymentmethods.filter(function(pm) { return pm.handlerIdentifier == "Etbag\\TrxpsPayments\\Handler\\Method\\TrxpsPayment"; });
+        if (tmp.length == 1) {
+          this.trxpsPaymentMethod = tmp[0];
+        }
       });
   }
 
@@ -176,9 +181,11 @@ export class MerchantDetailsComponent implements OnInit {
 
     // update data
     const updatedData = {
-      mollieProdKey: newData.mollieProdKey,
-      mollieTestKey: newData.mollieTestKey,
-      mollieTestEnabled: newData.mollieTestEnabled,
+      trxpsProdKey: newData.trxpsProdKey,
+      trxpsTestKey: newData.trxpsTestKey,
+      trxpsProdShopId: newData.trxpsProdShopId,
+      trxpsTestShopId: newData.trxpsTestShopId,
+      trxpsTestEnabled: newData.trxpsTestEnabled,
       paymentMethods: merchantPaymentMethods
     } as Merchant;
 
@@ -252,9 +259,11 @@ export class MerchantDetailsComponent implements OnInit {
    */
   private createPaymentForm(): void {
     this.paymentsForm = this.formBuilder.group({
-      mollieProdKey: this.merchant.mollieProdKey,
-      mollieTestKey: this.merchant.mollieTestKey,
-      mollieTestEnabled: this.merchant.mollieTestEnabled
+      trxpsProdKey: this.merchant.trxpsProdKey,
+      trxpsTestKey: this.merchant.trxpsTestKey,
+      trxpsProdShopId: this.merchant.trxpsProdShopId,
+      trxpsTestShopId: this.merchant.trxpsTestShopId,
+      trxpsTestEnabled: this.merchant.trxpsTestEnabled
     });
   }
 

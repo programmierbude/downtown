@@ -98,9 +98,11 @@ class MerchantDefinition extends EntityDefinition
             (new LongTextField('revocation', 'revocation')),
 
 
-            (new StringField('mollie_prod_key', 'mollieProdKey')),
-            (new StringField('mollie_test_key', 'mollieTestKey')),
-            (new BoolField('mollie_test_enabled', 'mollieTestEnabled')),
+            (new StringField('trxps_prod_key', 'trxpsProdKey')),
+            (new StringField('trxps_test_key', 'trxpsTestKey')),
+            (new StringField('trxps_prod_shop_id', 'trxpsProdShopId')),
+            (new StringField('trxps_test_shop_id', 'trxpsTestShopId')),
+            (new BoolField('trxps_test_enabled', 'trxpsTestEnabled')),
 
             (new StringField('payment_methods', 'paymentMethods')),
 
