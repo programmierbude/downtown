@@ -61,7 +61,7 @@ Prerequisites: [docker](https://docs.docker.com/install/), [docker-compose](http
 Clone the project:
 
 ```shell script
-git clone https://github.com/shopwareDowntown/downtown.git
+git clone --recurse-submodules https://github.com/safety-net-code/downtown
 ```
 
 Change into the project directory, then start the docker containers, add the cache directory and change into the app container:
@@ -78,11 +78,11 @@ docker-compose up -d
 docker-compose exec cli bash
 ```
 
-When inside the app container, do a basic install, generate a JWT secret and an App Secret, then exit the container:
+When inside the app container, do a basic install, generate a JWT secret and an App Secret, then exit the container. Replace http://shopware.local with your domain if needed.
 
 ```shell script
 composer install
-bin/console system:setup
+export APP_URL=http://shopware.local && bin/console system:setup
 ```
 Change the default credentials as listed and confirm those at the end:
 ```shell script
