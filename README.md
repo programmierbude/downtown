@@ -177,6 +177,32 @@ for your merchant.
 Only payment methods that are valid for the sales channel and are enabled in here will be
 shown during the checkout.
 
+# Migrating from an existing downtown installation
+
+If enabled: please disable and uninstall the Mollie payment plugin.
+
+Then pull the modified downtown code:
+```shell script
+git remote add downtown-etb https://github.com/safety-net-code/downtown
+git pull downtown-etb master --recurse-submodules
+git submodule update --init --recursive
+```
+
+Run the following SQL query against the shopware database:
+```sql
+ALTER TABLE `merchant`
+            DROP `mollie_prod_key`,
+            DROP `mollie_test_key`,
+            DROP `mollie_test_enabled`,
+            ADD `trxps_prod_key` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+            ADD `trxps_test_key` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+            ADD `trxps_prod_shop_id` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+            ADD `trxps_test_shop_id` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+            ADD `trxps_test_enabled` tinyint(1) DEFAULT 0;
+```
+
+Install and enable the TRXPS plugin and enable the payment option in Settings > Payment. Then enable the TRXPS payment option for each saleschannel in which you want to use TRXPS payment. Now each merchant from the selected saleschannels is able to add its own API keys in the merchant frontend.
+
 # Contributing
 
 You have an idea or you found an issue? Please open an issue here: [shopwareDowntown/portal/issues](https://github.com/shopwareDowntown/portal/issues)
